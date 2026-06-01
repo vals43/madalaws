@@ -1,0 +1,1 @@
+'use strict'; module.exports = { up: async (qi, Sequelize) => { await qi.createTable('codes', { id: { type: Sequelize.UUID, defaultValue: Sequelize.UUIDV4, primaryKey: true }, name: { type: Sequelize.STRING, allowNull: false }, description: { type: Sequelize.TEXT }, createdAt: Sequelize.DATE, updatedAt: Sequelize.DATE }); }, down: async (qi) => { await qi.dropTable('codes'); } };

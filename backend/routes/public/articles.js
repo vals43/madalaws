@@ -1,0 +1,1 @@
+const express = require('express'); const router = express.Router(); const ctrl = require('../../controllers/public/articlesController'); router.get('/', ctrl.getAll); router.get('/:id', ctrl.getOne); router.get('/by-chapter/:chapterId', ctrl.getByChapter); router.get('/by-section/:sectionId', ctrl.getBySection); module.exports = router;

@@ -1,0 +1,2 @@
+'use strict'; const bcrypt = require('bcryptjs');
+module.exports = { up: async (qi) => { const hash = await bcrypt.hash('admin123', 10); await qi.bulkInsert('users', [{ id: '11111111-1111-1111-1111-111111111111', email: 'admin@madalaws.mg', password: hash, role: 'admin', createdAt: new Date(), updatedAt: new Date() }]); }, down: async (qi) => { await qi.bulkDelete('users', null); } };

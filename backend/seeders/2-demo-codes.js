@@ -1,0 +1,1 @@
+'use strict'; module.exports = { up: async (qi) => { await qi.bulkInsert('codes', [{ id: 'aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa', name: 'Code pénal', description: 'Lois répressives malgaches', createdAt: new Date(), updatedAt: new Date() }]); }, down: async (qi) => { await qi.bulkDelete('codes', null); } };
